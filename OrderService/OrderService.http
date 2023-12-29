@@ -1,0 +1,18 @@
+@OrderService_HostAddress = http://localhost:5075
+
+GET {{OrderService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+
+POST {{OrderService_HostAddress}}/order/CreateOrder
+Content-Type: application/json
+
+{
+  "price": 1,
+  "PaymentCardNumber": "1234-5678-9012-3456",
+  "ProductName": "Example Product",
+  "IsCanceled":true
+}
+###
